@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+    </head>
+    <body>
+        <h1> <%= title %> </h1>
+       <div>
+        <div>
+            <form action="create-contact" method="post">
+                <input name="name" placeholder="Your Name" type="text" required>
+                <input name = "phone" placeholder="Your Phone number" type="text" required>
+                <button type="submit">Add Contact</button>
+            </form>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <th> # </th>
+                    <th> Name </th> 
+                    <th> Phone </th>  
+                    <th> Actions </th>
+                </tr>
+                <% var j=1 %>
+                <% for(let i of  contact_list){ %>
+                    
+                    <tr>
+                        <td><%= j++ %></td>
+                        <td><%=i.name %></td>
+                        <td><%=i.phone %></td>
+                        <td>Delete</td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+       </div>
+
+    </body>
+</html>
