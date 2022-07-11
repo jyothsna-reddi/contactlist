@@ -2,21 +2,23 @@ body{
     text-align: center;
     background-image: linear-gradient(rgb(21, 148, 87),rgb(24, 5, 84));
     margin: 0px;
+   
     color: white;
-}
-.container{
-    width:80%;
+    margin-top: 40px;
     
-    margin: auto;
 }
+
+
 .form-container{
-    width:90%;
- 
+    width:40%;
+    box-sizing: border-box;
     margin: auto;
 }
 form input {
-    height : 40px;
+    height : 50px;
     width:90%;
+    box-sizing: border-box;
+    border-radius: 20px;
     margin: 10px;
     padding: 5px;
     background-color: rgb(238, 225, 225);
@@ -28,7 +30,8 @@ form input {
 button{
     padding: 10px;
     background-color: blue;
-    margin-top:5px ;
+    margin-top:10px ;
+    border-radius:5px;
     font-size: 1.1em;
     font-weight: 400;
     border-radius: 4px;
@@ -43,16 +46,60 @@ button:hover {
 input:focus{
     outline: none;
 }
-table{
+.results-container{
+    width:50%;
+    /* min-width: 500px; */
     margin: auto;
-    margin-left:6.5%;
-    margin-top: 10px;
-    width: 80%;
-    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding: 0%;
+    /* margin-left: 23%; */
+}
+.action:hover~div  {
+    background-color: rgb(72, 223, 31);
+}
+.results-container:hover {
+    color: red;
+}
+.table{
+    margin: auto;
+    border-radius: 6px;
+    width: 90%;
+    color: black;
+    
    font-style: italic;
    background-image: linear-gradient(white 20%,rgb(215, 206, 206));
 
 }
+.row-container{
+    display: flex;
+    position: relative;
+    /* margin-bottom: 10px; */
+}
+.row-container >div{
+    /* list-style-type: none;
+    display: inline-block; */
+    font-size: 20px;
+    padding: 20px;
+    overflow-x: hidden;
+    width:30%;
+    flex-grow: 1;
+}
+
+.serialno{
+    width:5% !important;
+}
+.Heading{
+    
+    font-weight: 600;
+}
+
+.action:hover ~ .serialno{
+    background-color: aqua;
+}
+
 th{
     font: 600;
     font-size: 1.2em;
@@ -73,4 +120,66 @@ button i{
     margin-right:10px;
     margin-top: 1px;
     font-size: 1.1em !important;
+}
+
+@media only screen and (max-width: 912px) {
+    .results-container{
+        width: 60%;
+       
+        /* min-width: 400px; */
+        padding: 0px;
+       
+    
+    }
+}
+@media only screen and (max-width: 820px) {
+    .results-container{
+        width: 100%;
+       
+        /* min-width: 400px; */
+        padding: 0px;
+       
+    
+    }
+    .row-container > div{
+      
+       margin-left: 0px;
+    }
+    .row-container > div{
+      
+        overflow: hidden;
+    }
+    .form-container{
+        width:60%;
+        min-width: 200px;
+        padding: 0%;
+        margin: auto;
+    }
+}
+#name input,#phone input{
+    height:40px;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+
+}
+.action a{
+    text-decoration: none;
+    border: 1px solid lightgray;
+    background-color: red;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+}
+#edit{
+    background-color: blue;
+    color: white;
+}
+#delete{
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px lightgray;  
 }
